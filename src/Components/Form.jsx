@@ -6,7 +6,6 @@ function FormCv() {
   const [name, setName] = useState("");
   const [surname, setSurName] = useState("");
   const [email, setEmail] = useState("");
-
   const [contact, setContact] = useState("");
 
   function handleName(e) {
@@ -21,6 +20,7 @@ function FormCv() {
   function handleContact(e) {
     setContact(e.target.value);
   }
+
   return (
     <div>
       <Personal
@@ -33,6 +33,7 @@ function FormCv() {
         contact={contact}
         hancleContact={handleContact}
       />
+
       <Cv name={name} surname={surname} email={email} contact={contact} />
     </div>
   );
