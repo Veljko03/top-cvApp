@@ -64,7 +64,7 @@ function ExpirienceForm({
   }
   return (
     <div>
-      Expirience: <button onClick={handleShow}>Show</button>
+      Expirience: <button onClick={handleShow}>{show ? "hide" : "show"}</button>
     </div>
   );
 }

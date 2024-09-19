@@ -21,7 +21,7 @@ function Personal({
     return (
       <div>
         General Info: <button onClick={handleShow}>Show</button>
-        <div>
+        <div className="inputs">
           <Input
             label={"Name:"}
             value={name}
@@ -55,7 +55,8 @@ function Personal({
   }
   return (
     <div>
-      General Info: <button onClick={handleShow}>Show</button>
+      General Info:{" "}
+      <button onClick={handleShow}>{show ? "hide" : "show"}</button>
     </div>
   );
 }

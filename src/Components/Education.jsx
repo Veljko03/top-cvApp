@@ -55,7 +55,7 @@ function EduForm({
   }
   return (
     <div>
-      Education: <button onClick={handleShow}>Show</button>
+      Education: <button onClick={handleShow}>{show ? "hide" : "show"}</button>
     </div>
   );
 }

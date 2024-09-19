@@ -95,7 +95,7 @@ function FormCv() {
         exSDate={exSDate}
         handleExSDate={handleExSDate}
         exEDate={exEDate}
-        handleExEDate={handleDateE}
+        handleExEDate={handleExEDate}
       />
 
       <Cv name={name} surname={surname} email={email} contact={contact} />
