@@ -2,6 +2,7 @@ import { useState } from "react";
 import Personal from "./PersonalInfo";
 import Cv from "./Cv";
 import EduForm from "./Education";
+import ExpirienceForm from "./Expirience";
 
 function FormCv() {
   const [name, setName] = useState("");
@@ -13,6 +14,27 @@ function FormCv() {
   const [dateEnd, setDateE] = useState("");
   const [degree, setDegree] = useState("");
 
+  const [companyName, setCompanyName] = useState("");
+  const [position, setPosition] = useState("");
+  const [responsibilities, setResponsibilities] = useState("");
+  const [exSDate, setExSDate] = useState("");
+  const [exEDate, setexEDate] = useState("");
+
+  function handleCompanyName(e) {
+    setCompanyName(e.target.value);
+  }
+  function handlePosition(e) {
+    setPosition(e.target.value);
+  }
+  function handleResponsibilities(e) {
+    setResponsibilities(e.target.value);
+  }
+  function handleExSDate(e) {
+    setExSDate(e.target.value);
+  }
+  function handleExEDate(e) {
+    setexEDate(e.target.value);
+  }
   function handleSchoolName(e) {
     setSchoolName(e.target.value);
   }
@@ -61,6 +83,19 @@ function FormCv() {
         handleDateE={handleDateE}
         degree={degree}
         handleDegree={handleDegree}
+      />
+
+      <ExpirienceForm
+        companyName={companyName}
+        handleCompanyName={handleCompanyName}
+        position={position}
+        handlePosition={handlePosition}
+        responsibilities={responsibilities}
+        handleResponsibilities={handleResponsibilities}
+        exSDate={exSDate}
+        handleExSDate={handleExSDate}
+        exEDate={exEDate}
+        handleExEDate={handleDateE}
       />
 
       <Cv name={name} surname={surname} email={email} contact={contact} />
