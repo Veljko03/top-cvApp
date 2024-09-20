@@ -16,33 +16,36 @@ function Personal({
     setShow(!show);
     console.log(show);
   }
-
+  const inputsStyle = {
+    display: "flex",
+    flexDirection: "column",
+    gap: "20px",
+    marginTop: "30px",
+  };
   if (show) {
     return (
       <div>
-        General Info: <button onClick={handleShow}>Show</button>
-        <div className="inputs">
+        General Info:{" "}
+        <button onClick={handleShow}>{show ? "hide" : "show"}</button>
+        <div style={inputsStyle}>
           <Input
             label={"Name:"}
             value={name}
             onChange={handleName}
             type={"text"}
           />
-          <br />
           <Input
             label={"Surnmae:"}
             value={surname}
             onChange={handleSurname}
             type={"text"}
           />
-          <br />
           <Input
             label={"Email:"}
             value={email}
             onChange={handleEmail}
             type={"email"}
           />
-          <br />
           <Input
             label={"Contact:"}
             value={contact}

@@ -16,33 +16,36 @@ function EduForm({
     setShow(!show);
     console.log(show);
   }
-
+  const inputsStyle = {
+    display: "flex",
+    flexDirection: "column",
+    gap: "20px",
+    marginTop: "30px",
+  };
   if (show) {
     return (
       <div>
-        Education: <button onClick={handleShow}>Show</button>
-        <div>
+        Education:{" "}
+        <button onClick={handleShow}>{show ? "hide" : "show"}</button>
+        <div style={inputsStyle}>
           <Input
             label={"School Name:"}
             value={schoolName}
             onChange={handleSchoolName}
             type={"text"}
           />
-          <br />
           <Input
             label={"Title:"}
             value={degree}
             onChange={handleDegree}
             type={"text"}
           />
-          <br />
           <Input
             label={"Start date"}
             value={dateStart}
             onChange={handleDateS}
             type={"date"}
           />
-          <br />
           <Input
             label={"End date"}
             value={dateEnd}

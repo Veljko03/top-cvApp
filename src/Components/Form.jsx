@@ -60,45 +60,79 @@ function FormCv() {
   function handleContact(e) {
     setContact(e.target.value);
   }
+  const container = {
+    display: "flex",
+    gap: "100px",
+  };
 
+  const forms = {
+    display: "flex",
+    flexDirection: "column",
+    gap: "30px",
+    border: "solid black 2px",
+    padding: "15px",
+    borderRadius: "8px",
+  };
+
+  const cv = {
+    display: "flex",
+    justifyItems: "center",
+  };
   return (
-    <div>
-      <Personal
-        name={name}
-        handleName={handleName}
-        surname={surname}
-        handleSurname={handleSur}
-        email={email}
-        handleEmail={handleEmail}
-        contact={contact}
-        hancleContact={handleContact}
-      />
+    <div style={container}>
+      <div style={forms}>
+        <Personal
+          name={name}
+          handleName={handleName}
+          surname={surname}
+          handleSurname={handleSur}
+          email={email}
+          handleEmail={handleEmail}
+          contact={contact}
+          hancleContact={handleContact}
+        />
 
-      <EduForm
-        schoolName={schoolName}
-        handleSchoolName={handleSchoolName}
-        dateStart={dateStart}
-        handleDateS={handleDateS}
-        dateEnd={dateEnd}
-        handleDateE={handleDateE}
-        degree={degree}
-        handleDegree={handleDegree}
-      />
+        <EduForm
+          schoolName={schoolName}
+          handleSchoolName={handleSchoolName}
+          dateStart={dateStart}
+          handleDateS={handleDateS}
+          dateEnd={dateEnd}
+          handleDateE={handleDateE}
+          degree={degree}
+          handleDegree={handleDegree}
+        />
 
-      <ExpirienceForm
-        companyName={companyName}
-        handleCompanyName={handleCompanyName}
-        position={position}
-        handlePosition={handlePosition}
-        responsibilities={responsibilities}
-        handleResponsibilities={handleResponsibilities}
-        exSDate={exSDate}
-        handleExSDate={handleExSDate}
-        exEDate={exEDate}
-        handleExEDate={handleExEDate}
-      />
+        <ExpirienceForm
+          companyName={companyName}
+          handleCompanyName={handleCompanyName}
+          position={position}
+          handlePosition={handlePosition}
+          responsibilities={responsibilities}
+          handleResponsibilities={handleResponsibilities}
+          exSDate={exSDate}
+          handleExSDate={handleExSDate}
+          exEDate={exEDate}
+          handleExEDate={handleExEDate}
+        />
+      </div>
 
-      <Cv name={name} surname={surname} email={email} contact={contact} />
+      <div style={cv}>
+        <Cv
+          name={name}
+          surname={surname}
+          email={email}
+          contact={contact}
+          schoolName={schoolName}
+          dateStart={dateStart}
+          dateEnd={dateEnd}
+          companyName={companyName}
+          position={position}
+          responsibilities={responsibilities}
+          exEDate={exEDate}
+          exSDate={exSDate}
+        />
+      </div>
     </div>
   );
 }

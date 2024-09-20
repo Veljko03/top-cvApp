@@ -19,39 +19,47 @@ function ExpirienceForm({
     console.log(show);
   }
 
+  const inputsStyle = {
+    display: "flex",
+    flexDirection: "column",
+    gap: "20px",
+    marginTop: "30px",
+  };
+
   if (show) {
     return (
       <div>
-        Education: <button onClick={handleShow}>Show</button>
-        <div>
+        Education:{" "}
+        <button onClick={handleShow}>{show ? "hide" : "show"}</button>
+        <div style={inputsStyle}>
           <Input
             label={"Company Name:"}
             value={companyName}
             onChange={handleCompanyName}
             type={"text"}
           />
-          <br />
+
           <Input
             label={"Position:"}
             value={position}
             onChange={handlePosition}
             type={"text"}
           />
-          <br />
+
           <Input
             label={"Responisibilites"}
             value={responsibilities}
             onChange={handleResponsibilities}
             type={"text"}
           />
-          <br />
+
           <Input
             label={"Start date"}
             value={exSDate}
             onChange={handleExSDate}
             type={"date"}
           />
-          <br />
+
           <Input
             label={"End date"}
             value={exEDate}
